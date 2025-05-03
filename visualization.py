@@ -23,8 +23,6 @@ def plot_seasonal_pattern(df):
     ax.grid(True)
     return fig
 
-
-
 def plot_yearly_trends(df):
     year_avg=df.groupby('year')['temperature'].mean().reset_index()
     fig,ax=plt.subplots(figsize=(8,5))
