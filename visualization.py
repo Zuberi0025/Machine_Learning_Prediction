@@ -1,8 +1,8 @@
 import pandas as pd
 import numpy as np
 #import seaborn as sns
-#import seaborn as sns
-#import matplotlib.pyplot as plt
+import seaborn as sns
+import matplotlib.pyplot as plt
 
 def plot_time_series(df):
     fig,ax=plt.subplots(figsize=(8,5))
@@ -15,13 +15,13 @@ def plot_time_series(df):
 def plot_seasonal_pattern(df):
     
     """"Monthly temp distribution"""
-    #fig,ax=plt.subplots(figsize=(8,5))
-    #sns.boxplot(x='month',y="temperature",data=df,ax=ax)
-    #ax.set_xlabel("month")
-    #ax.set_ylabel("Temperature")
-    #ax.set_title("Monthly Temp distribution")
-    #ax.grid(True)
-    #return fig
+    fig,ax=plt.subplots(figsize=(8,5))
+    sns.boxplot(x='month',y="temperature",data=df,ax=ax)
+    ax.set_xlabel("month")
+    ax.set_ylabel("Temperature")
+    ax.set_title("Monthly Temp distribution")
+    ax.grid(True)
+    return fig
 
 def plot_yearly_trends(df):
     year_avg=df.groupby('year')['temperature'].mean().reset_index()
