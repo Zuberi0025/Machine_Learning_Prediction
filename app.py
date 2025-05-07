@@ -1,6 +1,4 @@
 import streamlit as st
-#st.title('My App')
-#st.write('Hello Tanzania') 
 from pages import data_exploration, model_training,prediction_page
 from data_utilis import load_data
 
