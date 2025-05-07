@@ -1,7 +1,6 @@
 import streamlit as st
 from pages import data_exploration, model_training,prediction_page
 from data_utilis import load_data
-
 #set configurations
 st.set_page_config(
     page_title="Climate Trend Prediction",page_icon='',layout="wide"
