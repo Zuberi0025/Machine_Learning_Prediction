@@ -9,13 +9,7 @@ def show(df):
     """Display the prediction page"""
     st.header("Temp predictions")
     #Chek if the model exit
-    if 'model' not in st.session_state:
-        model=load_model()
-        if model in None:
-            st.warning("No training model go back to model training")
-            st.stop()
-        st.session_state['model']=model
-        st.session_state['model_type']='Pre_trained model'
+    
     #show the used model
     st.info(f"Using{st.session_state['model_type']} for prediction")
     
